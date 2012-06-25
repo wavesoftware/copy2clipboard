@@ -9,5 +9,7 @@
 
     <!-- set-property name="user.agent" value="safari"/ -->
 
-    <inherits name="de.codecentric.vaadin.popup.PopupButtonViewWidgetset" />
+    
+
+    <inherits name="org.vaadin.hene.popupbutton.widgetset.PopupbuttonWidgetset" />
 </module>

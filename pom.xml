@@ -2,20 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
-	<parent>
-		<groupId>de.codecentric.vaadin</groupId>
-		<artifactId>vaadin-addons-build</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../vaadin-addons/vaadin-addons-build/pom.xml</relativePath>
-	</parent>
-
-	<groupId>de.codecentric.vaadin</groupId>
+	
+	<groupId>de.codecentric.vaadin.copy2clipboard</groupId>
 	<artifactId>copy2clipboard</artifactId>
-	<version>0.1.8</version>
+	<version>0.1.9</version>
 
 	<name>Vaadin Copy to clipboard widget</name>
 	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<repo.url>https://ec2-54-247-175-2.eu-west-1.compute.amazonaws.com/artifactory</repo.url>
+		
+		<gwt.version>2.4.0</gwt.version>
+		<gwt.plugin.version>2.4.0</gwt.plugin.version>
+		<vaadin.version>6.7.8</vaadin.version>
+		<vaadin.plugin.version>1.0.2</vaadin.plugin.version>
+	</properties>
 
 	<build>
 		<plugins>
@@ -67,23 +71,26 @@
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin</artifactId>
+			<version>${vaadin.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
+			<version>${gwt.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>de.codecentric.vaadin</groupId>
-			<artifactId>popup</artifactId>
-		 	<version>0.5</version>
+   			<groupId>org.vaadin.addons</groupId>
+   			<artifactId>popupbutton</artifactId>
+   			<version>1.2.1</version>
 		</dependency>
 		
-		<!-- enable this for client side debugging -->
+		<!-- enable this for client side debugging >
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-dev</artifactId>
-			<version>2.4.0</version>
-		</dependency>
+			<version>${gwt.version}</version>
+		</dependency -->
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
@@ -98,6 +105,46 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>vaadin-snapshots</id>
+			<url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>vaadin-addons</id>
+			<url>http://maven.vaadin.com/vaadin-addons</url>
+		</repository>
+		<repository>
+			<id>central</id>
+			<name>libs-release</name>
+			<url>${repo.url}/repo</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>${repo.url}/libs-snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
 
 	<profiles>
 		<profile>
