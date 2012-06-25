@@ -3,7 +3,6 @@ package de.codecentric.vaadin.copy2clipboard;
 import com.vaadin.Application;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.Window;
@@ -25,11 +24,6 @@ public class Copy2ClipboardApplication extends Application {
     private static final long serialVersionUID = 1198903699329175622L;
 
     /**
-     * Widget for checking if flash is enabled.
-     */
-    final FlashCheck fc = new FlashCheck();
-
-    /**
      * (non-Javadoc)
      * 
      * @see com.vaadin.Application#init()
@@ -38,13 +32,6 @@ public class Copy2ClipboardApplication extends Application {
     public void init() {
 	final Window mainWindow = new Window();
 	setMainWindow(mainWindow);
-
-	mainWindow.addComponent(fc);
-
-	if (!fc.isFlashEnabled()) {
-	    mainWindow.addComponent(new Label("The Flash plugin is not installed/active."));
-	    return;
-	}
 
 	Button b = new Button("show/hide button");
 	b.addListener(new Button.ClickListener() {
