@@ -1,0 +1,2 @@
+# Module de.codecentric.vaadin.gwt.Copy2ClipboardWidgetset
+# RPC service class, partial path of RPC policy file

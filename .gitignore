@@ -1,0 +1,16 @@
+*.class
+*.jar
+*.war
+*.ear
+
+.classpath
+.project
+.settings
+.pmd
+.DS_Store
+
+target/
+src/main/webapp/VAADIN/widgetsets/
+bin/
+
+GWT development mode for copy2clipboard.launch
