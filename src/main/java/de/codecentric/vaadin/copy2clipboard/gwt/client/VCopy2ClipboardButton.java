@@ -175,7 +175,7 @@ public class VCopy2ClipboardButton extends VButton {
      */
     private native void glueCopy(String baseUrl, Element buttonElement, String buttonId)
     /*-{
-        var path = baseUrl + 'ZeroClipboard10.swf';
+        var path = baseUrl + 'zeroclipboard/ZeroClipboard10.swf';
         $wnd.ZeroClipboard.setMoviePath(path);
 
         var clip = $wnd.ZeroClipboard.newClient(); // new instance
