@@ -5,7 +5,7 @@
 	
 	<groupId>de.codecentric.vaadin.copy2clipboard</groupId>
 	<artifactId>copy2clipboard</artifactId>
-	<version>0.1.9</version>
+	<version>0.2.0</version>
 
 	<name>Vaadin Copy to clipboard widget</name>
 	<packaging>jar</packaging>
@@ -36,7 +36,7 @@
 						<manifestEntries>
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
 							<!-- Comma-separated list of widgetsets in the package -->
-							<Vaadin-Widgetsets>de.codecentric.vaadin.gwt.Copy2ClipboardWidgetset</Vaadin-Widgetsets>
+							<Vaadin-Widgetsets>de.codecentric.vaadin.copy2clipboard.gwt.Copy2ClipboardWidgetset</Vaadin-Widgetsets>
 						</manifestEntries>
 					</archive>
 				</configuration>
