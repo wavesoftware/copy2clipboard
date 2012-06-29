@@ -50,7 +50,6 @@
 						<manifestEntries>
 							<Vaadin-Widgetsets>de.codecentric.vaadin.copy2clipboard.gwt.Copy2ClipboardWidgetset</Vaadin-Widgetsets>
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
-							<Built-By>henning.treu@codecentric.de</Built-By>
 						</manifestEntries>
 					</archive>
 				</configuration>
