@@ -18,6 +18,10 @@ package de.codecentric.vaadin.copy2clipboard;
 import org.vaadin.hene.popupbutton.PopupButton;
 
 import com.vaadin.Application;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Button.ClickEvent;
+import com.vaadin.ui.Button.ClickListener;
+import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.Window;
 
@@ -90,6 +94,32 @@ public class Copy2ClipboardApplication extends Application {
 	});
 
 	mainWindow.addComponent(popup);
+
+	Button modal = new Button("open modal window");
+	modal.addListener(new ClickListener() {
+
+	    @Override
+	    public void buttonClick(ClickEvent event) {
+		Window w = new Window("Modal window");
+		w.setModal(true);
+		w.center();
+		w.setContent(new ModalLayout());
+		mainWindow.addWindow(w);
+	    }
+	});
+
+	mainWindow.addComponent(modal);
+    }
+
+    private class ModalLayout extends CssLayout {
+
+	private ModalLayout() {
+	    Copy2ClipboardButton button = new Copy2ClipboardButton();
+	    button.setCaption("Copy");
+	    button.setClipboardText("copied from modal window");
+	    button.addListener(new CopyListener("from modal window: copied to clipboard"));
+	    addComponent(button);
+	}
     }
 
     /**
