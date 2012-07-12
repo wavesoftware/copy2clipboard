@@ -5,11 +5,11 @@
 
 	<groupId>de.codecentric.vaadin</groupId>
 	<artifactId>copy2clipboard</artifactId>
-	<version>0.2.5</version>
+	<version>0.2.6</version>
 
 	<name>Copy2Clipboard widget for Vaadin</name>
 	<!-- change this to war to deploy the test app -->
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -150,11 +150,6 @@
 			<artifactId>gwt-user</artifactId>
 			<version>${gwt.version}</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.vaadin.addons</groupId>
-			<artifactId>popupbutton</artifactId>
-			<version>1.2.1</version>
 		</dependency>
 
 		<!-- enable this for client side debugging --> 

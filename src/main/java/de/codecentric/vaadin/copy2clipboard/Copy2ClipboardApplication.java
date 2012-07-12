@@ -15,8 +15,6 @@
  */
 package de.codecentric.vaadin.copy2clipboard;
 
-import org.vaadin.hene.popupbutton.PopupButton;
-
 import com.vaadin.Application;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
@@ -75,33 +73,12 @@ public class Copy2ClipboardApplication extends Application {
 	panel.addComponent(c2c);
 	mainWindow.addComponent(panel);
 
-	// add a Copy2ClipboardButton to a popup:
-
-	Copy2ClipboardButton popupCopy = new Copy2ClipboardButton("copy", true);
-	popupCopy.addListener(new CopyListener("from popup: copied to clipboard"));
-
-	final PopupButton popup = new PopupButton("click me");
-	popupCopy.setClipboardText("popup copy!!!");
-	popup.addComponent(popupCopy);
-
-	// make the popup stay visible:
-	popupCopy.addListener(new ClipboardListener() {
-
-	    @Override
-	    public void copiedToClipboard(ClipboardEvent event) {
-		popup.setPopupVisible(true);
-	    }
-	});
-
-	mainWindow.addComponent(popup);
-
 	Button modal = new Button("open modal window");
 	modal.addListener(new ClickListener() {
 
 	    @Override
 	    public void buttonClick(ClickEvent event) {
-		Window w = new Window("Modal window");
-		w.setModal(true);
+		C2CModalWindow w = new C2CModalWindow("Modal window");
 		w.center();
 		w.setContent(new ModalLayout());
 		mainWindow.addWindow(w);

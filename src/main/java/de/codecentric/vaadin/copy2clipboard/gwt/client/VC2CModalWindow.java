@@ -16,7 +16,7 @@ import com.vaadin.terminal.gwt.client.ui.VWindow;
  * @since 1.2
  * @author ttran
  **/
-public class GWindow extends VWindow {
+public class VC2CModalWindow extends VWindow {
 
     private boolean modal;
 
