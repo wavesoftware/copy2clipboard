@@ -8,6 +8,7 @@
     <inherits name="org.vaadin.hene.popupbutton.widgetset.PopupbuttonWidgetset" />
     <!-- set-property name="user.agent" value="safari"/ -->
     
+	<!-- A VWindow replacement to allow copy from modal window. See http://dev.vaadin.com/ticket/9001 -->
     <replace-with class="de.codecentric.vaadin.copy2clipboard.gwt.client.GWindow">
         <when-type-is class="com.vaadin.terminal.gwt.client.ui.VWindow"/>
     </replace-with>
