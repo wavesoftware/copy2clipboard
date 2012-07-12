@@ -100,7 +100,7 @@ public class Copy2ClipboardApplication extends Application {
 
 	    @Override
 	    public void buttonClick(ClickEvent event) {
-		Window w = new Window("Modal window");
+		C2CWindow w = new C2CWindow("Modal window");
 		w.setModal(true);
 		w.center();
 		w.setContent(new ModalLayout());

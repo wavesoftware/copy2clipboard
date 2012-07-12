@@ -5,7 +5,7 @@
 
 	<groupId>de.codecentric.vaadin</groupId>
 	<artifactId>copy2clipboard</artifactId>
-	<version>0.2.4</version>
+	<version>0.2.5</version>
 
 	<name>Copy2Clipboard widget for Vaadin</name>
 	<!-- change this to war to deploy the test app -->
@@ -158,11 +158,11 @@
 			<version>1.2.1</version>
 		</dependency>
 
-		<!-- enable this for client side debugging > 
+		<!-- enable this for client side debugging --> 
 		<dependency> <groupId>com.google.gwt</groupId> 
 			<artifactId>gwt-dev</artifactId> 
 			<version>${gwt.version}</version> 
-		</dependency -->
+		</dependency>
 	</dependencies>
 
 	<profiles>

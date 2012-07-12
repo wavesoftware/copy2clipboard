@@ -7,4 +7,8 @@
 
     <inherits name="org.vaadin.hene.popupbutton.widgetset.PopupbuttonWidgetset" />
     <!-- set-property name="user.agent" value="safari"/ -->
+    
+    <replace-with class="de.codecentric.vaadin.copy2clipboard.gwt.client.GWindow">
+        <when-type-is class="com.vaadin.terminal.gwt.client.ui.VWindow"/>
+    </replace-with>
 </module>
