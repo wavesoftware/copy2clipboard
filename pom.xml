@@ -14,7 +14,6 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<repo.url>https://ec2-54-247-175-2.eu-west-1.compute.amazonaws.com/artifactory</repo.url>
 
 		<gwt.version>2.4.0</gwt.version>
 		<gwt.plugin.version>2.4.0</gwt.plugin.version>
