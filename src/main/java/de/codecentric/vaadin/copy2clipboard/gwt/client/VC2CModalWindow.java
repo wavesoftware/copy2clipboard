@@ -1,3 +1,16 @@
+/* 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
 package de.codecentric.vaadin.copy2clipboard.gwt.client;
 
 import com.google.gwt.user.client.Event;
@@ -7,7 +20,8 @@ import com.vaadin.terminal.gwt.client.ui.VWindow;
 
 /**
  * <p>
- * A placement of VWindow implementation to fix issue with CKEditor component in a modal window.
+ * A placement of VWindow implementation to fix issue with Copy2ClipboardButton component in a modal
+ * window.
  * </p>
  * 
  * @see http://code.google.com/p/vaadin-ckeditor/issues/detail?id=10
@@ -18,6 +32,9 @@ import com.vaadin.terminal.gwt.client.ui.VWindow;
  **/
 public class VC2CModalWindow extends VWindow {
 
+    /**
+     * Whether this window is modal.
+     */
     private boolean modal;
 
     /**
