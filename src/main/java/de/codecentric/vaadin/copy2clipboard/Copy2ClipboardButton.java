@@ -61,16 +61,10 @@ public class Copy2ClipboardButton extends Button {
     private String clipboardText;
 
     /**
-     * Whether to retain the DOM element of the flash movie. This should be true for buttons which
-     * hide and show (e.g. buttons in popups).
-     */
-    private final boolean retainClipElement;
-
-    /**
      * Constructor
      */
     public Copy2ClipboardButton() {
-	this(null, false);
+	this(null);
     }
 
     /**
@@ -80,21 +74,7 @@ public class Copy2ClipboardButton extends Button {
      *            the caption of the button.
      */
     public Copy2ClipboardButton(String caption) {
-	this(caption, false);
-    }
-
-    /**
-     * Constructor with caption and retain flag.
-     * 
-     * @param caption
-     *            the caption of the button.
-     * @param retainClipElement
-     *            whether to retain the DOM element of the flash movie. Set this to
-     *            <code>true</code> for buttons that hide/show during their lifecycle.
-     */
-    public Copy2ClipboardButton(String caption, boolean retainClipElement) {
 	super(caption);
-	this.retainClipElement = retainClipElement;
     }
 
     /**
@@ -120,7 +100,6 @@ public class Copy2ClipboardButton extends Button {
 	if (clipboardText != null) {
 	    target.addAttribute(VCopy2ClipboardButton.VAR_CLIPBOARD_TEXT, clipboardText);
 	}
-	target.addAttribute(VCopy2ClipboardButton.VAR_CLIPBOARD_RETAIN_CLIP, retainClipElement);
 	target.endTag(VCopy2ClipboardButton.VAR_RESOURCE);
     }
 

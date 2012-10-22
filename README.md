@@ -4,11 +4,11 @@ copy2clipboard
 Vaadin AddOn for copying texts to clipboard using [ZeroClipboard](https://github.com/jonrohan/ZeroClipboard). 
 
 
-#### Usage
+#### History
 
-
-#### License
-
+0.3.0 uses a single swf and positiones it on mouseover of the respective button
+ 
+0.2.x use one swf per button
 
 #### Files from ZeroClipboard
 
